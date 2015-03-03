@@ -1,0 +1,710 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"TEM",
+				"TEMPLATE_PATH〔variable〕"
+			],
+			[
+				"se",
+				"serch_term"
+			],
+			[
+				"dt",
+				"dt_range〔variable〕"
+			],
+			[
+				"tmp",
+				"temperature"
+			],
+			[
+				"u",
+				"u"
+			],
+			[
+				"count",
+				"country_code"
+			],
+			[
+				"countryco",
+				"country_code3"
+			],
+			[
+				"us",
+				"USZIP_KEYS"
+			],
+			[
+				"date",
+				"DATE_FORMAT"
+			],
+			[
+				"g",
+				"GEONAME_KEYS"
+			],
+			[
+				"prec",
+				"precipProbability"
+			],
+			[
+				"clou",
+				"cloudCover"
+			],
+			[
+				"x",
+				"x_labels_major"
+			],
+			[
+				"deco",
+				"text-decoration"
+			],
+			[
+				"border-bott",
+				"border-bottom-right-radius"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"res",
+				"resultDisplay"
+			],
+			[
+				"input",
+				"input_b"
+			],
+			[
+				"list",
+				"journal_list"
+			],
+			[
+				"journal",
+				"journal_list"
+			],
+			[
+				"bott",
+				"padding-bottom"
+			],
+			[
+				"multp",
+				"multiples_3_5"
+			],
+			[
+				"current",
+				"current_collection"
+			],
+			[
+				"col",
+				"coll_dict"
+			],
+			[
+				"getdue",
+				"get_due_dates"
+			],
+			[
+				"sorted",
+				"sorted_keys"
+			],
+			[
+				"gen",
+				"gen_test2"
+			],
+			[
+				"sort",
+				"sort_var"
+			],
+			[
+				"cur",
+				"cur_collection"
+			],
+			[
+				"food",
+				"food_used"
+			],
+			[
+				"most",
+				"most_food"
+			],
+			[
+				"min",
+				"min_grid"
+			],
+			[
+				"minpa",
+				"min_path"
+			],
+			[
+				"minp",
+				"minpath"
+			],
+			[
+				"next",
+				"next_scene_name"
+			],
+			[
+				"ae",
+				"ae2"
+			],
+			[
+				"hot",
+				"hot_dice"
+			],
+			[
+				"shorts",
+				"short_snip"
+			],
+			[
+				"short",
+				"short_snip"
+			],
+			[
+				"num",
+				"num_terms"
+			],
+			[
+				"rev",
+				"rev_set_x"
+			],
+			[
+				"set",
+				"set_x"
+			],
+			[
+				"clear",
+				"clear_screen"
+			],
+			[
+				"dice",
+				"dice_index"
+			],
+			[
+				"PRA",
+				"PHRASE_FIRST"
+			],
+			[
+				"Phrases",
+				"PHRASES"
+			],
+			[
+				"WOR",
+				"WORDS"
+			],
+			[
+				"WORD",
+				"WORD_URL"
+			],
+			[
+				"die",
+				"die_selection"
+			],
+			[
+				"entry",
+				"entry_map"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"word",
+				"word_count"
+			],
+			[
+				"arg",
+				"arg2"
+			],
+			[
+				"print",
+				"print_contact"
+			],
+			[
+				"address",
+				"address_book"
+			],
+			[
+				"new",
+				"new_contact"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"go",
+				"GOD"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"markdownpre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdownp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Remove Package"
+			],
+			[
+				"emmet",
+				"Set Syntax: Emmet"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"linter",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"toggle l",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecon",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"pylint",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/media/rango.sublime-project",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/templates/rango/category.html",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/models.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/views.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/templates/rango/index.html",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/urls.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/tango_with_django_project/urls.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/populate_rango.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/admin.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/migrations/0003_category_slug.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/rango/migrations/__init__.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/tango_with_django_project/settings.py",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/templates/rango/about.html",
+		"/home/ferd/pdxcodeguild/01-projects/.gitignore",
+		"/home/ferd/Dev/weather/src/app.py",
+		"/home/ferd/Dev/photo-discovery/docs/spec.md",
+		"/home/ferd/Dev/weather/src/templates/index-template.html",
+		"/home/ferd/Dev/weather/src/weatherdata.py",
+		"/home/ferd/.bashrc",
+		"/home/ferd/Dev/weather/src/weather.py",
+		"/home/ferd/Dev/weather/src/locdb.pyc",
+		"/home/ferd/Dev/weather/web/assets/js/main.js",
+		"/home/ferd/Dev/weather/web/assets/css/main.css",
+		"/home/ferd/Dev/weather/src/locsearch.py",
+		"/tmp/fz3temp-1/autostart.cgi",
+		"/usr/share/applications/defaults.list",
+		"/home/ferd/pdxcodeguild/01-projects/tango_with_django_project/manage.py",
+		"/home/ferd/.config/sublime-text-3/Packages/User/Python.sublime-settings",
+		"/home/ferd/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/ferd/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/00-bashscripts/sysinfo_page",
+		"/home/ferd/Dev/weather/src/weather.pyc",
+		"/home/ferd/Dev/weather/src/weather",
+		"/home/ferd/Dev/weather/web/index.html",
+		"/home/ferd/pdxcodeguild/zz-practice/bottle-test.py",
+		"/home/ferd/Dev/weather/app.py",
+		"/home/ferd/pdxcodeguild/zz-practice/db_test.py",
+		"/home/ferd/Dev/photo-discovery/docs/photo_discovery.txt",
+		"/home/ferd/.config/sublime-text-3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/home/ferd/.config/sublime-text-3/Packages/User/Markdown (Standard).sublime-settings",
+		"/home/ferd/.config/sublime-text-3/Packages/MarkdownEditing/README.md",
+		"/home/ferd/Dev/photo_discovery.txt",
+		"/home/ferd/Dev/weather/src/locdb.py",
+		"/home/ferd/Dev/weather/src/data-sources/geonames/test-data.txt",
+		"/home/ferd/Dev/weather/src/data-sources/geonames/cities5000.txt",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/maker_script.py",
+		"/home/ferd/Dev/ferdaszewski-website/README.md",
+		"/home/ferd/Desktop/test",
+		"/home/ferd/Dev/weather/web/assets/sparklines/jquery.sparkline.js",
+		"/home/ferd/Dev/weather/src/svg.py",
+		"/home/ferd/Dev/weather/.gitignore",
+		"/home/ferd/.config/sublime-text-3/Packages/User/JavaScript.sublime-settings",
+		"/home/ferd/Dev/weather/src/data/locsearch.py",
+		"/home/ferd/Dev/weather/src/citydb/locdb.py",
+		"/home/ferd/Dev/weather/src/citydb/sources/geonames/readme",
+		"/home/ferd/Dev/weather/src/citydb/citydb.py",
+		"/home/ferd/Dev/weather/src/citydb/citysearch.py",
+		"/home/ferd/Dev/weather/src/citydb/searchdb.py",
+		"/home/ferd/Dev/ferdaszewski-website/.gitignore",
+		"/home/ferd/Dev/weather/src/citydb/cities.db",
+		"/home/ferd/Dev/weather/src/citydb/test.py",
+		"/home/ferd/Dev/weather/src/citydb/small-cities5000.txt",
+		"/home/ferd/Dev/weather/src/citydb/temp",
+		"/home/ferd/Dev/weather/src/cill/cill.py",
+		"/home/ferd/Dev/weather/src/JSON-test-data-dump.json",
+		"/home/ferd/Dev/weather/src/line_chart.svg",
+		"/home/ferd/Dev/weather/src/line_chart_fd.svg",
+		"/home/ferd/pdxcodeguild/01-projects/03-doto/doto.py",
+		"/home/ferd/pdxcodeguild/01-projects/03-doto/dotopy",
+		"/home/ferd/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/ferd/.cache/.fr-dznwt9/cities5000.txt",
+		"/home/ferd/Dev/ferdaszewski-website/assets/css/main.css",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/photo_template",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/index_template",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/base_template",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/readme.txt",
+		"/home/ferd/Dev/ferdaszewski-website/photos.html",
+		"/home/ferd/Dev/ferdaszewski-website/assets/js/photo.js",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/about_template",
+		"/home/ferd/Dev/ferdaszewski-website/journal.html",
+		"/home/ferd/Dev/ferdaszewski-website/index.html",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/parse.py",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/journal_template",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/photo.html",
+		"/home/ferd/Dev/ferdaszewski-website/photo.tmp.html",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/template_notes.txt",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/thewalk.txt",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/jinja_templates/journal_template.html",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/journal.html",
+		"/home/ferd/Dev/ferdaszewski-website/build_helpers/python_scripts/journal.tmp",
+		"/home/ferd/Dev/ferdaszewski-website/assets/js/main.js",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/js-html-css/calc/calc.html",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/js-html-css/calc/css/main.css",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/js-html-css/calc/js/calc.js",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/js-html-css/calc/skeleton/skeleton.css",
+		"/home/ferd/.bash_aliases",
+		"/home/ferd/Dev/zz-sundry/diary.py",
+		"/home/ferd/pdxcodeguild/01-projects/zz-sundry/js-html-css/calc/calc.js",
+		"/home/ferd/pdxcodeguild/zz-practice/js/calc.html",
+		"/home/ferd/pdxcodeguild/zz-practice/js/calc.js",
+		"/home/ferd/pdxcodeguild/zz-practice/js/jstest.html",
+		"/home/ferd/pdxcodeguild/zz-practice/js/temp.py",
+		"/home/ferd/pdxcodeguild/zz-practice/js/index.html",
+		"/home/ferd/pdxcodeguild/02-notes/js.txt",
+		"/home/ferd/Dev/zz-sundry/students.py",
+		"/home/ferd/Dev/ferdaszewski-website/zz-build_helpers/jinja_templates/journal_template.html",
+		"/home/ferd/Dev/ferdaszewski-website/zz-build_helpers/python_scripts/parse.py",
+		"/home/ferd/Dev/ferdaszewski-website/zz-build_helpers/python_scripts/journal.tmp",
+		"/home/ferd/Dev/ferdaszewski-website/tmp/img-html.tmp",
+		"/home/ferd/Dev/ferdaszewski-website/css/main.css",
+		"/home/ferd/Dev/ferdaszewski-website/zz-build_helpers/jinja_templates/photo_template.html",
+		"/home/ferd/Dev/ferdaszewski-website/about.html",
+		"/home/ferd/Dev/ferdaszewski-website/tmp/thewalk.txt",
+		"/home/ferd/Dev/ferdaszewski-website/tmp/thewalk.htm",
+		"/home/ferd/Dev/ferdaszewski-website/tmp/htmlparse.py",
+		"/home/ferd/pdxcodeguild/01-projects/04-ferdaszewski/index.html",
+		"/home/ferd/pdxcodeguild/01-projects/04-ferdaszewski/normalize.css",
+		"/home/ferd/.config/sublime-text-3/Packages/User/HTML.sublime-settings",
+		"/home/ferd/pdxcodeguild/01-projects/04-ferdaszewski/main.css",
+		"/home/ferd/pdxcodeguild/01-projects/03-doto/dtmain.py",
+		"/home/ferd/.config/sublime-text-3/Packages/User/CSS.sublime-settings",
+		"/home/ferd/pdxcodeguild/01-projects/04-ferdaszewski/photos.html",
+		"/var/www/html/index.html",
+		"/home/ferd/pdxcodeguild/02-notes/networking.txt",
+		"/home/ferd/pdxcodeguild/zz-practice/html-intro.html",
+		"/home/ferd/euler/001-mult3_5.py",
+		"/home/ferd/.local/share/applications/firefox_dev.desktop",
+		"/home/ferd/pdxcodeguild/zz-practice/socket_server.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"max_lenght",
+			"gedit",
+			"city_query",
+			"new-search",
+			"col-xs-6",
+			"render_weather",
+			"render_page",
+			"print",
+			"search",
+			"current",
+			"start_dt",
+			"start",
+			"\\n",
+			",",
+			"sunrise",
+			"auto",
+			"\"",
+			"uxbridge",
+			"\"",
+			"uxbridge",
+			"geonames",
+			"sources",
+			"New York",
+			"forecast",
+			"get_forcast",
+			"forcast",
+			"css",
+			"width ",
+			"sunrise",
+			"dt_range[0]",
+			"sunrise",
+			"dt",
+			"roundTo",
+			"sunrise",
+			"dt_range",
+			"time_range",
+			"time",
+			"draw_sparklines",
+			"app",
+			"LineChartConfig",
+			"section",
+			"    \n",
+			"self.",
+			"50",
+			"city_q_list",
+			"city_query",
+			"city_query_list",
+			"city_query",
+			"line",
+			"search_list",
+			"geo_file",
+			"city",
+			"City",
+			"geoname_file",
+			"GEONAME_KEYS",
+			"*/",
+			"f",
+			"null=True",
+			"geonamid",
+			"\n",
+			"line_chart",
+			"data_name",
+			"line_data",
+			"# pygal chart configuration\n",
+			"=",
+			"Satsuma",
+			"bottom",
+			"image_page_str",
+			"f",
+			"parse_journal_text",
+			"VERTICAL",
+			"month",
+			"month_year",
+			"hight",
+			"journal_entry",
+			"september",
+			"journal_entry",
+			"collapse02",
+			"heading02",
+			"collapse01",
+			"heading01",
+			"collapse01",
+			"heading01",
+			"dispaydiv",
+			"itm",
+			"date_info",
+			"</strong>",
+			"<strong>",
+			" 5",
+			"April 5",
+			"font",
+			"But",
+			"<font size=\"3\" face=\"Times New Roman, Times, serif\">",
+			"But",
+			"><font size=\"3\" face=\"Times New Roman, Times, serif\">But",
+			"<font size=\"3\" face=\"Times New Roman, Times, serif\">",
+			"But",
+			"><font size=\"3\" face=\"Times New Roman, Times, serif\">But",
+			"<font size=\"3\" face=\"Times New Roman, Times, serif\">",
+			"july 14",
+			"  vertical-align: ;\n",
+			"Crest",
+			"=\"#\">",
+			"group",
+			" class=\"nav-bar-link\" ",
+			"collections",
+			"s",
+			"task_id",
+			"serial_collections",
+			"task_dict",
+			"ID",
+			"id",
+			"hash",
+			"Hash",
+			"hash",
+			"id",
+			"ID",
+			"id",
+			"ID",
+			"id",
+			"self",
+			"sellection",
+			"name",
+			"tag",
+			"get_task_list",
+			"tasks",
+			"task",
+			"Task"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"sublime_text",
+			"",
+			"\\n",
+			"",
+			"</article><article>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "rango.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 179.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

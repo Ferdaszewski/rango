@@ -51,9 +51,11 @@ def add_category(request):
                 form.save(commit=True)
                 return redirect('index')
 
-            # Database error, name and/or slug not unique
+            # Database error, slug is not unique
+            # (i.e. 'Python'.slug == 'python'.slug)
             except IntegrityError:
-                form.add_error('name', "That Category already exists!")
+                form.add_error('name',
+                    "That Category is to similar to one that already exists!")
         else:
             print form.errors
     # Not a HTTP POST, prep blank form for render
@@ -152,7 +154,7 @@ def user_login(request):
 
 @login_required
 def restricted(request):
-    return HttpResponse("Since you are logged in, you can see this text!")
+    return render(request, 'rango/restricted.html', {})
 
 
 @login_required

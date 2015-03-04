@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from django.db import IntegrityError
 
 from rango.forms import CategoryForm, PageForm
 from rango.models import Category, Page
@@ -43,8 +44,13 @@ def add_category(request):
         form = CategoryForm(request.POST)
 
         if form.is_valid():
-            form.save(commit=True)
-            return index(request)
+            try:
+                form.save(commit=True)
+                return redirect('index')
+
+            # Database error, name and/or slug not unique
+            except IntegrityError:
+                form.add_error('name', "That Category already exists!")
         else:
             print form.errors
     else:
@@ -68,7 +74,8 @@ def add_page(request, category_name_slug):
                 page.category = cat
                 page.views = 0
                 page.save()
-                return category(request, category_name_slug)
+                return redirect('category',
+                                category_name_slug=category_name_slug)
         else:
             print form.errors
     else:

@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
@@ -11,19 +12,45 @@ from rango.models import Category, Page
 def index(request):
     """Returns the main page of the Rango app."""
 
-    # Top 5 categories by likes
-    category_list = Category.objects.order_by('-likes')[:5]
-    context_dict = {'categories': category_list}
+    # List of all categories, ordered by likes
+    category_list = Category.objects.order_by('-likes')
 
     # Top 5 pages by likes
     page_list = Page.objects.order_by('-views')[:5]
-    context_dict['pages'] = page_list
+    context_dict = {'categories': category_list, 'pages': page_list}
+
+    # Get site visit count for session, default to 1 if it doesn't exist
+    visits = request.session.get('visits', 1)
+
+    reset_last_visit_time = False
+    last_visit = request.session.get('last_visit')
+    datetime_format = "%Y-%m-%d %H:%M:%S"
+
+    if last_visit:
+        last_visit_time = datetime.strptime(last_visit, datetime_format)
+
+        # More than a day since the last visit
+        if (datetime.now() - last_visit_time).days > 1:
+            visits += 1
+            reset_last_visit_time = True
+    else:
+        reset_last_visit_time = True
+
+    if reset_last_visit_time:
+        request.session['last_visit'] = datetime.strftime(
+            datetime.now(), datetime_format)
+        request.session['visits'] = visits
+    context_dict['visits'] = visits
 
     return render(request, 'rango/index.html', context_dict)
 
 
 def about(request):
-    return render(request, 'rango/about.html')
+
+    # Get index visit count, default to 0 if it does not exist
+    visits = request.session.get('visits', 0)
+
+    return render(request, 'rango/about.html', {'visits': visits})
 
 
 def category(request, category_name_slug):

@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -136,3 +137,19 @@ def search(request):
             result_list = bing_search.run_query(query)
 
     return render(request, 'rango/search.html', {'result_list': result_list})
+
+
+def track_url(request):
+    if request.method == "GET" and 'page_id' in request.GET:
+        page_id = request.GET['page_id']
+
+        try:
+            page = Page.objects.get(id=page_id)
+            page.views += 1
+            page.save()
+            return redirect(page.url)
+        except ObjectDoesNotExist:
+            print "Page ID: {0} not found.".format(page_id)
+
+    # No page_id or page_id not found, return to homepage
+    return redirect('index')

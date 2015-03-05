@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load rango_extras %}
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -57,15 +59,20 @@
 
   <div class="container-fluid">
     <div class="row">
+
       <aside class="col-sm-3 col-md-2 sidebar">
-        {% block side_block %}{% endblock %}
+        {% block side_block %}
+        {% get_category_list category %}
+        {% endblock %}
       </aside>
+
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div>
           {% block body_block %}{% endblock %}
         </div>
-      </div>      
-    </div>    
+      </div>
+
+    </div>
   </div>
   <!-- Bootstrap core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

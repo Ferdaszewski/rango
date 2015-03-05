@@ -12,8 +12,8 @@ from rango.models import Category, Page
 def index(request):
     """Returns the main page of the Rango app."""
 
-    # List of all categories, ordered by likes
-    category_list = Category.objects.order_by('-likes')
+    # List of top 5 categories, ordered by likes
+    category_list = Category.objects.order_by('-likes')[:5]
 
     # Top 5 pages by likes
     page_list = Page.objects.order_by('-views')[:5]

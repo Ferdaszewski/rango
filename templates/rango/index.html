@@ -1,31 +1,58 @@
 {% extends 'rango/base.html' %}
 
+{% block title %}Index{% endblock %}
+
 {% block body_block %}
-
+  
+  <div class="page-header">
   {% if user.is_authenticated %}
-  <h1>Rango says...hello {{ user.username }}!</h1>
+    <h1>Rango says...hello {{ user.username }}!</h1>
   {% else %}
-  <h1>Rango says...hello world!</h1>
+    <h1>Rango says...hello world!</h1>
   {% endif %}
-  <p>visits: {{ visits }}</p>
+  </div>
 
-  {% if categories %}
-    <h2>Top Categories by likes</h2>
-    <ul>
-      {% for category in categories %}
-      <li><a href="{% url 'category' category.slug %}">{{ category.name }} - {{ category.likes }} likes</a></li>
-      {% endfor %}
-    </ul>
-    {% if pages %}
-    <h2>Top Pages by views</h2>
-    <ul>
-      {% for page in pages %}
-      <li><a href="{{ page.url }}">{{ page.title }} - {{ page.views }} views</a></li>      
-      {% endfor %}
-    </ul>
-    {% endif %}
-  {% else %}
-    <strong>There are not categories present.</strong>
-  {% endif %}
+  <div class="row">
 
+    <div class="col-xs-12 col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Top Categories by Likes</h3>
+        </div>
+      </div>
+      {% if categories %}
+        <ul class="list-group">
+        {% for category in categories %}
+          <li class="list-group-item">
+            <a href="{% url 'category' category.slug %}">{{ category.name }}</a>
+            <span class="badge">{{ category.likes }}</span>
+          </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <strong>There are not categories currently.</strong>
+      {% endif %}
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Top Pages by Views</h3>
+        </div>
+      </div>
+      {% if pages %}
+        <ul class="list-group">
+        {% for page in pages %}
+          <li class="list-group-item">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+            <span class="badge">{{ page.views }}</span>
+          </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <strong>There are not pages currently.</strong>
+      {% endif %}
+    </div>
+    
+  </div>
 {% endblock %}

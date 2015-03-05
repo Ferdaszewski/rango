@@ -1,11 +1,22 @@
 {% extends "rango/base.html" %}
 
-{% block body_block %}
-<h1>Register Here</h1>
-  <form method="POST" action=".">
-    {% csrf_token %}
-    {{ form.as_p }}
+{% load bootstrap3 %}
 
-    <input type="submit" value="Submit" />
+{% block title %}Register{% endblock %}
+
+{% block body_block %}
+  <div class="page-header">
+    <h1>Register Here</h1>
+  </div>
+
+  {% bootstrap_messages %}
+  <form class="col-sm-6 col-xs-12" id="registration_form" method="POST" action="">
+    {% csrf_token %}
+    {%bootstrap_form form %}
+
+    {% buttons %}
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="Register">Register</button>
+    {% endbuttons %}
   </form>
+
 {% endblock %}

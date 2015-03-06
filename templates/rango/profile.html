@@ -3,13 +3,34 @@
 {% block title %}Profile{% endblock %}
 
 {% block body_block %}
- <div>
-   <ul>
-     <li>{{ user.username }}</li>
-     <li>{{ user.email }}</li>
-     <li>{{ user_profile.website }}</li>
-     <li>{{ user_profile.picture }}</li>
-   </ul>
- </div>
+  <div class="page-header">
+    <h1>Profile</h1>
+  </div>
+
+  <div class="col-sm-6 col-xs-12">
+    <div class="list-group">
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Username</h4>
+        <div class="list-group-text">{{ user.username }}</div>
+      </div>
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Email</h4>
+        <div class="list-group-text">{{ user.email }}</div>
+      </div>
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Website</h4>
+        <a href="{{ user_profile.website }}" class="list-group-text" target="_blank">{{ user_profile.website }}</a>
+      </div>      
+    </div>
+    <a class="btn btn-default" href="{% url 'add_profile' %}">Edit Profile</a>
+    <a class="btn btn-default" href="{% url 'auth_password_change' %}">Change Password</a>
+  </div>
+
+{% if user_profile.picture %}
+  <div class="col-sm-6 col-xs-12">
+    <img class="img-responsive" src="{{ MEDIA_URL }}{{ user_profile.picture }}" alt="{{ user.username }} profile picture">
+    <p>Profile Image</p>
+  </div>
+{% endif %}
 
 {% endblock %}

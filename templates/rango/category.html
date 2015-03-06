@@ -16,7 +16,13 @@
         {% for page in pages|dictsortreversed:"views" %}
           <a class="list-group-item" href="{% url 'goto' %}?page_id={{ page.id }}" target="_blank">
             {{ page.title }}
+
+            {% if page.views > 1 %}
             <span class="badge">{{ page.views }} views</span>
+            {% elif page.views == 1 %}
+            <span class="badge">{{ page.views }} view</span>
+            {% endif %}
+
           </a>
         {% endfor %}
         </div>
@@ -35,8 +41,8 @@
       <form class="col-sm-6 col-xs-12" id="search_form" method="POST" action="{% url 'category' category.slug %}">
         {% csrf_token %}
         <div class="form-group required">     
-          <label class="control-label" for="query">Search for a page</label>
-          <input class="form-control" type="text" name="query" value="" id="query" placeholder="Search Query" required>
+          <label class="control-label" for="query">Search the Web</label>
+          <input class="form-control" type="text" name="query" value="{{ query }}" id="query" placeholder="Search Query" required>
         </div>
         <div class="form-group">     
           <button class="btn btn-primary btn-block" type="submit" value="Search">Search</button>

@@ -57,12 +57,17 @@ def about(request):
 
 def category(request, category_name_slug):
     context_dict = {}
+    context_dict['result_list'] = None
+    context_dict['query'] = None
 
     # If HTTP POST, then search and display results
     if request.method == 'POST':
         query = request.POST['query'].strip()
 
-        # TODO: Emplement site search and return results to context_dict
+        if query:
+            result_list = bing_search.run_query(query)
+            context_dict['result_list'] = result_list
+            context_dict['query'] = query
 
     # Load all pages for category if they exist
     try:
@@ -74,6 +79,10 @@ def category(request, category_name_slug):
         context_dict['category_name_slug'] = category_name_slug
     except Category.DoesNotExist:
         print "Category: {0} not found.".format(category_name_slug)
+
+    # Default to current category name if not search term entered
+    if not context_dict['query']:
+        context_dict['query'] = category.name
 
     return render(request, 'rango/category.html', context_dict)
 
@@ -136,18 +145,6 @@ def restricted(request):
     return render(request, 'rango/restricted.html', {})
 
 
-def search(request):
-    result_list = []
-
-    if request.method == 'POST':
-        query = request.POST['query'].strip()
-
-        if query:
-            result_list = bing_search.run_query(query)
-
-    return render(request, 'rango/search.html', {'result_list': result_list})
-
-
 def track_url(request):
     if request.method == "GET" and 'page_id' in request.GET:
         page_id = request.GET['page_id']
@@ -162,6 +159,7 @@ def track_url(request):
 
     # No page_id or page_id not found, return to homepage
     return redirect('index')
+
 
 @login_required
 def register_profile(request):

@@ -8,12 +8,12 @@ $(document).ready( function() {
     alert("You clicked me! ouch!");
   });
 
-  $("p").hover( function() {
-    $(this).css('color', 'red');
-  },
-  function() {
-    $(this).css('color', 'blue');
-  });
+  // $("p").hover( function() {
+  //   $(this).css('color', 'red');
+  // },
+  // function() {
+  //   $(this).css('color', 'blue');
+  // });
 
   $("#about-btn").addClass('btn btn-primary');
 

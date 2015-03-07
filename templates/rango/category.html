@@ -4,15 +4,22 @@
 
 {% block body_block %}
   <div class="page-header">  
-    <h1>{{ category_name }} - {{ category.likes }} Likes</h1>
+    <h1>{{ category_name }}</h1>
+    <p>
+      {% if user.is_authenticated %}
+      <button id="likes" data-catid="{{ category.id }}" class="btn btn-primary btn-sm" type="button"><span class="glyphicon glyphicon-thumbs-up"></span> Like</button>
+      {% endif %}
+      <span id="likes_count">{{ category.likes }}</span> people like this!
+    </p>
   </div>
+
   {% if category %}
 
     <div class="row">
       <div class="panel panel-default">
 
       {% if pages %}
-        <div class="list-group">
+        <div class="list-group page">
         {% for page in pages|dictsortreversed:"views" %}
           <a class="list-group-item" href="{% url 'goto' %}?page_id={{ page.id }}" target="_blank">
             {{ page.title }}
@@ -35,7 +42,6 @@
     </div>
 
     {% if user.is_authenticated %}
-    <a href="{% url 'add_page' category.slug %}">Add a page to this category: <strong>{{ category_name }}</strong></a>
 
     <div class="row">
       <form class="col-sm-6 col-xs-12" id="search_form" method="POST" action="{% url 'category' category.slug %}">
@@ -60,16 +66,25 @@
 
         <div class="list-group">
         {% for result in result_list %}
-          <a class="list-group-item" href="{{ result.link }}" target="_blank">
-            <h4 class="list-group-item-heading">{{ result.title }}</h4>
-            <p class="list-group-item-text">{{ result.summary }}</p>
-          </a>
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading">
+              <a href="{{ result.link }}" target="_blank">{{ result.title }}</a>
+            </h4>
+            <p class="list-group-item-text">
+              {% if user.is_authenticated %}
+                <button data-catid="{{ category.id }}" data-title="{{ result.title }}" data-url="{{ result.link }}" class="rango-add btn btn-xs btn-info" type="button">Add</button>
+              {{ result.summary }}
+            </p>
+            {% endif %}
+          </div>
         {% endfor %}
         </div>
 
       {% endif %}
       </div>
     </div>
+
+    <a href="{% url 'add_page' category.slug %}">Add a page to this category: <strong>{{ category_name }}</strong></a>
 
     {% endif %}
 

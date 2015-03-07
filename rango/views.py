@@ -201,3 +201,62 @@ def profile(request):
 
     return render(request, 'rango/profile.html',
                   {'user': user, 'user_profile': user_profile})
+
+
+@login_required
+def like_category(request):
+    cat_id = None
+    if request.method == 'GET':
+        cat_id = request.GET['category_id']
+
+    likes = 0
+    if cat_id:
+        cat = Category.objects.get(id=int(cat_id))
+        if cat:
+            cat.likes += 1
+            likes = cat.likes
+            cat.save()
+
+    return HttpResponse(likes)
+
+
+def suggest_category(request):
+    cat_list = []
+    starts_with = ''
+    if request.method == 'GET':
+        starts_with = request.GET['suggestion'].strip()
+
+    cat_list = get_category_list(8, starts_with)
+
+    return render(request, 'rango/cats.html', {'cats': cat_list})
+
+
+def get_category_list(max_results=0, starts_with=''):
+    cat_list = []
+    if starts_with:
+        cat_list = Category.objects.filter(name__istartswith=starts_with)
+    else:
+        # No search string, display the top 8 categories
+        cat_list = Category.objects.order_by('-likes')[:8]
+        max_results = 8
+
+    if max_results > 0:
+        if len(cat_list) > max_results:
+            cat_list = cat_list[:max_results]
+
+    return cat_list
+
+
+def auto_add_page(request):
+    if request.method == 'GET':
+        cat_id = request.GET['cat_id']
+        category = Category.objects.get(id=int(cat_id))
+        title = request.GET['title']
+        url = request.GET['url']
+
+        page, _ = Page.objects.update_or_create(
+            category=category,
+            title=title,
+            url=url)
+
+    return HttpResponse(page)

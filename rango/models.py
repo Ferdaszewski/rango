@@ -14,6 +14,11 @@ class Category(models.Model):
         # Create the slug only once to avoid broken links if name is changed
         if not self.id:
             self.slug = slugify(self.name)
+
+        # Views must be 0 or positive
+        if self.views < 0:
+            self.views = 0
+
         super(Category, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -22,11 +27,14 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "categories"
 
+
 class Page(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(max_length=128)
     url = models.URLField()
     views = models.IntegerField(default=0)
+    first_visit = models.DateTimeField(null=True)
+    last_visit = models.DateTimeField(null=True)
 
     def __unicode__(self):
         return self.title

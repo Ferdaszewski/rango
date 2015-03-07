@@ -5,6 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+import pytz
 
 from rango import bing_search
 from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
@@ -152,6 +153,11 @@ def track_url(request):
         try:
             page = Page.objects.get(id=page_id)
             page.views += 1
+
+            if page.first_visit is None:
+                page.first_visit = datetime.now(pytz.utc)
+            page.last_visit = datetime.now(pytz.utc)
+
             page.save()
             return redirect(page.url)
         except ObjectDoesNotExist:
